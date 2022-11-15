@@ -29,7 +29,7 @@ extern "C" {
 extern jclass s_Object_class;
 extern jclass s_String_class;
 struct String_;
-typedef struct String_* String;
+typedef struct String_* PLJString;
 
 /*
  * Create a Java String object from a null terminated string. Conversion is
@@ -73,7 +73,7 @@ extern text* String_createText(jstring javaString);
 
 extern Type String_obtain(Oid typeId);
 
-extern String StringClass_obtain(TypeClass self, Oid typeId);
+extern PLJString StringClass_obtain(TypeClass self, Oid typeId);
 
 #ifdef __cplusplus
 }
